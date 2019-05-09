@@ -1,6 +1,6 @@
 {
-  "short_name": "Dialogflow",
-  "name": "Dialogflow For Web v2",
+  "short_name": "Titanic chatbot",
+  "name": "DrAnt - chatbot explaining Machine Learning model for Titanic survival",
   "icons": [
     {
       "src": "assets/manifest_icons/res/mipmap-mdpi/ic_launcher.png",
