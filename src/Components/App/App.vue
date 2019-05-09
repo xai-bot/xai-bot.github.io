@@ -170,7 +170,7 @@ export default {
             messages: [],
             language: '',
             session: '',
-            muted: this.config.app.muted,
+            muted: true,
             loading: false
         }
     },
