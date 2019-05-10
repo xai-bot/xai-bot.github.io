@@ -9,7 +9,11 @@
         <h1 class="app-title">{{(config.i18n[sel_lang] && config.i18n[sel_lang].welcomeTitle) || config.i18n[config.app.fallback_lang].welcomeTitle}} {{app.displayName}}</h1>
 
         <!-- Agent Description -->
-        <p class="app-description">{{app.description}}</p>
+        <p class="app-description">{{app.description}} </p>
+		<p> Welcome to DrAnt - explainable AI chatbot. </p>
+		<p> You can talk with the Machine Learning model and ask for predictions and their explanations. </p>
+		<p> Do not limit yourself - the bot will learn from mistakes! </p>
+
         
         <!-- Language picker, when your Agent supports more than one Language -->
         <div v-if="app.supportedLanguageCodes && app.supportedLanguageCodes.length > 0">
