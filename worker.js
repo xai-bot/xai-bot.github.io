@@ -2,6 +2,7 @@ self.addEventListener('install', (event) =>{
     event.waitUntil(caches.open('dialogflow-web-v2').then(cache => {
         return cache.addAll([
             '/',
+            '/screen.png',
             '/index.html',
             '/dist/build.js',
             '/assets/manifest_icons/web_hi_res_512',
