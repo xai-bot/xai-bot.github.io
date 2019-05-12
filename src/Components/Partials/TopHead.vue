@@ -6,7 +6,10 @@
         <div class="app-info">
             <div class="app-name">{{app.displayName}}</div>
             <div class="app-poweredby"> <a href="https://github.com/pbiecek/xaibot-titanic"> GitHub </a>
-										<a href="mailto:kuzba.michal@gmail.com"> Mail </a></div>
+					<a href="mailto:kuzba.michal@gmail.com"> Mail </a>
+					<a href="https://mi2-warsaw.github.io/"> WWW </a>
+	</div>
+			
 
         </div>
     </header>
