@@ -22,7 +22,7 @@
                         <td>
 
                             <!-- Default / Webhook bubble -->
-                            <Bubble :text="component.content" v-if="component.name == 'DEFAULT'" />
+                            <Bubble :text="component.speech" v-if="component.type == 0" />
 
                             <!-- Simple Response -->
                             <Bubble :text="component.content.displayText || component.content.textToSpeech" v-if="component.name == 'SIMPLE_RESPONSE'" />
@@ -36,10 +36,10 @@
                             </div>
 
                             <!-- List -->
-                            <List @select="send" :items="component.content.items" :title="component.content.title" v-if="component.name == 'LIST'" />
+                            <List @select="send" :items="component.content.items" :title="component.content.title" v-if="component.type == 2" />
 
                             <!-- Webhook Image -->
-                            <Picture v-if="component.name == 'IMAGE'" :image="component.content" />
+                            <Picture v-if="component.type == 3" :image="component" />
                         </td>
                     </tr>
                 </table>
@@ -265,27 +265,29 @@ export default {
     },
     methods: {
         send(q){
-            let request = {
-                "queryInput": {
-                    "text": {
-                        "text": q,
-                        "languageCode": this.lang()
-                    }
-                }
-            } // <- this is how a Dialogflow request look like
 
             this.loading = true
 
             /* Make the request to gateway with formatting enabled */
-            fetch(this.config.app.gateway + '/' + this.session + '?format=true', {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(request)})
+            fetch(`https://api.dialogflow.com/v1/query?v=20150910&query=${q}&lang=en&sessionId=1234567`,
+                {method: 'GET', headers: {'content-type': 'application/json',
+                                        'Authorization': 'Bearer df9c131018dc46d7bd27841a914d5756'}})
             .then(response => {
                 return response.json()
             })
             .then(response => {
-                this.messages.push(response)
-                this.handle(response) // <- trigger the handle function (explanation below)
+                console.log(response);
+                console.log(JSON.stringify(response, null, 2));
+                let new_response = {
+                    "queryResult": {
+                        "queryText": response.result.resolvedQuery,
+                        "fulfillmentMessages": response.result.fulfillment.messages
+                    }
+                }
+                this.messages.push(new_response)
+                this.handle(new_response) // <- trigger the handle function (explanation below)
                 this.loading = false
-                //console.log(response) // <- (optional) log responses
+                console.log(JSON.stringify(new_response, null, 2)) // <- (optional) log responses
             })
         },
         handle(response){
