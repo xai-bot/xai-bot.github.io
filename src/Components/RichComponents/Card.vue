@@ -7,9 +7,9 @@
             <div class="card-text">{{text}}</div>
 
             <div class="card-buttons" v-if="button">
-                <a class="card-button" target="_blank" rel="noopener noreferrer" :href="button.openUriAction.uri">
+                <a class="card-button" target="_blank" rel="noopener noreferrer" :href="button.postback">
                     <i aria-hidden="true" class="material-icons card-button-icon">arrow_forward</i>
-                    <span class="card-button-title">{{button.title}}</span>
+                    <span class="card-button-title">{{button.text}}</span>
                 </a>
             </div>
         </div>

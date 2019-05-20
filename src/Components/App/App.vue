@@ -285,6 +285,17 @@ export default {
                         delete messages[i].title;
                         messages[i].content = messages[i].replies;
                     }
+                    else if (messages[i].type == 1){
+                        messages[i].name = "CARD";
+                        messages[i].content = {}
+                        messages[i].content.title = messages[i].title
+                        messages[i].content.formattedText = messages[i].subtitle
+                        messages[i].content.image = {}
+                        messages[i].content.image.imageUri = messages[i].imageUrl;
+                        messages[i].content.image.accessibilityText = "Card Image";
+                        messages[i].content.buttons = messages[i].buttons;
+
+                    }
                 }
                 let new_response = {
                     "queryResult": {
