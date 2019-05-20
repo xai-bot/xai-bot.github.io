@@ -269,7 +269,7 @@ export default {
             this.loading = true
 
             /* Make the request to gateway with formatting enabled */
-            fetch(`https://api.dialogflow.com/v1/query?v=20150910&query=${q}&lang=en&sessionId=1234567`,
+            fetch(`https://api.dialogflow.com/v1/query?v=20150910&query=${q}&lang=en&sessionId=${this.session}`,
                 {method: 'GET', headers: {'content-type': 'application/json',
                                         'Authorization': 'Bearer df9c131018dc46d7bd27841a914d5756'}})
             .then(response => {
