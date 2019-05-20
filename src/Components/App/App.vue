@@ -278,10 +278,18 @@ export default {
             .then(response => {
                 console.log(response);
                 console.log(JSON.stringify(response, null, 2));
+                let messages = response.result.fulfillment.messages;
+                for (var i = 0; i < messages.length; i++) {
+                    if (messages[i].type == 2) {
+                        messages[i].name = "SUGGESTIONS";
+                        delete messages[i].title;
+                        messages[i].content = messages[i].replies;
+                    }
+                }
                 let new_response = {
                     "queryResult": {
                         "queryText": response.result.resolvedQuery,
-                        "fulfillmentMessages": response.result.fulfillment.messages
+                        "fulfillmentMessages": messages
                     }
                 }
                 this.messages.push(new_response)

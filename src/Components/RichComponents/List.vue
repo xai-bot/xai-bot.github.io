@@ -1,15 +1,4 @@
 <template>
-    <div class="list">
-        <div class="list-title" v-if="title">{{title}}</div>
-        <div class="list-subtitle">Subtitle</div>
-        <div class="list-item" v-for="item in items" @click="$emit('select', item.info.key)">
-            <img class="list-item-image" v-if="item.image.imageUri" :src="item.image.imageUri" :alt="item.image.accessibilityText" />
-            <div class="list-item-content">
-                <div class="list-item-title">{{item.title}}</div>
-                <span class="list-item-description">{{item.description}}</span>
-            </div>
-        </div>
-    </div>
 </template>
 
 <style lang="sass" scoped>
