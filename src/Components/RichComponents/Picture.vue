@@ -1,5 +1,5 @@
 <template>
-    <img class="picture" :src="image.imageUri" :alt="image.accessibilityText" />
+    <img class="picture" :src="image.imageUrl" :alt="image.accessibilityText" />
 </template>
 
 <style lang="sass" scoped>
