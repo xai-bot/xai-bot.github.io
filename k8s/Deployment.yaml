@@ -20,7 +20,6 @@ spec:
     spec:
       containers:
       - name: dialogflow-ui
-        image: registry.gitlab.com/ushakov-inc/ushacom/dialogflow/web-v2:latest
         imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred

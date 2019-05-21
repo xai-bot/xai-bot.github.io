@@ -276,8 +276,8 @@ export default {
                 return response.json()
             })
             .then(response => {
-                console.log(response);
-                console.log(JSON.stringify(response, null, 2));
+                // console.log(response);
+                // console.log(JSON.stringify(response, null, 2));
                 let messages = response.result.fulfillment.messages;
                 for (var i = 0; i < messages.length; i++) {
                     if (messages[i].type == 2) {
@@ -306,25 +306,25 @@ export default {
                 this.messages.push(new_response)
                 this.handle(new_response) // <- trigger the handle function (explanation below)
                 this.loading = false
-                console.log(JSON.stringify(new_response, null, 2)) // <- (optional) log responses
+                //console.log(JSON.stringify(new_response, null, 2)) // <- (optional) log responses
             })
         },
+
         handle(response){
             /* This function is used for speech output */
             for (let component in response.queryResult.fulfillmentMessages){
                 let text // <- init a text variable
 
                 /* Set the text variable according to component name */
-                if(response.queryResult.fulfillmentMessages[component].name == 'DEFAULT') text = response.queryResult.fulfillmentMessages[component].content
-                if(response.queryResult.fulfillmentMessages[component].name == 'SIMPLE_RESPONSE') text = response.queryResult.fulfillmentMessages[component].content.textToSpeech
-
+                if(response.queryResult.fulfillmentMessages[component].type == 0) text = response.queryResult.fulfillmentMessages[component].speech
+                //console.log(text);
                 let speech = new SpeechSynthesisUtterance(text)
                 speech.voiceURI = 'native' // <- change this, to get a different voice
 
                 /* This "hack" is used to format our lang format, to some other lang format (example: en -> en_EN). Mainly for Safari, Firefox and Edge */
                 speech.lang = this.lang() + '-' + this.lang().toUpperCase()
 
-                if(!this.muted) window.speechSynthesis.speak(speech) // <- if app is not muted, speak out the speech
+                if(!this.muted && text && text !== "") window.speechSynthesis.speak(speech) // <- if app is not muted, speak out the speech
             }
         }
     }
