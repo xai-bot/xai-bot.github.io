@@ -196,14 +196,12 @@ export default {
         }
 
         else {
-            fetch(this.config.app.gateway)
-            .then(response => {
-                return response.json()
-            })
-            .then(agent => {
-                this.app = agent
-                if(this.history()) localStorage.setItem('agent', JSON.stringify(agent))
-            })
+            this.app = {
+                "displayName": "Titanic-explainer",
+                "defaultLanguageCode": "en",
+                "timeZone": "Europe/Kaliningrad",
+                "enableLogging": true,
+            }
         }
     },
     computed: {
