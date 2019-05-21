@@ -1,12 +1,3 @@
-let get_gateway_url = () => {
-    if(window.location.host.includes("cloud.ushakov.co")){
-        return "https://" + window.location.host.split('.')[0] + ".gateway.dialogflow.cloud.ushakov.co"
-    }
-
-    else {
-        return "https://dialogflow-web-v2.gateway.dialogflow.cloud.ushakov.co"
-    }
-}
 
 export default {
     app: {
