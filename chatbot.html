@@ -48,6 +48,30 @@
         <!-- Windows 8 -->
         <meta name="msapplication-TileImage" content="assets/manifest_icons/web_hi_res_512.png">
         <meta name="msapplication-TileColor" content="#FFFFFF">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+        
+        
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "position": "bottom-right",
+  "content": {
+    "message": "This website use cookies only for statistical purposes."
+  }
+})});
+</script>
+        
+        
     </head>
     <body>
         <div id="app"></div>
