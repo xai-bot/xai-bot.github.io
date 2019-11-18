@@ -8,6 +8,7 @@
             <div class="app-poweredby"> <a href="https://github.com/pbiecek/xaibot-titanic"> GitHub </a>
 					<a href="mailto:kuzba.michal@gmail.com"> Mail </a>
 					<a href="https://mi2-warsaw.github.io/"> WWW </a>
+					<a href="https://linkedin.com/in/michalkuzba "> LinkedIn </a>
 	</div>
 			
 
