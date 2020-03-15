@@ -1,7 +1,7 @@
-# Welcome to Titanic-explainer
+# Welcome to Corona Bot
 
 
-Welcome to DrAnt - explainable AI chatbot.
+Welcome to CoronaBot - explainable AI chatbot for COVID19 mortality prediction.
 
 You can talk with the Machine Learning model and ask for predictions and their explanations.
 
