@@ -197,7 +197,7 @@ export default {
 
         else {
             this.app = {
-                "displayName": "Titanic-explainer",
+                "displayName": "CoronaBot",
                 "defaultLanguageCode": "en",
                 "timeZone": "Europe/Kaliningrad",
                 "enableLogging": true,
@@ -269,7 +269,7 @@ export default {
             /* Make the request to gateway with formatting enabled */
             fetch(`https://api.dialogflow.com/v1/query?v=20150910&query=${q}&lang=en&sessionId=${this.session}`,
                 {method: 'GET', headers: {'content-type': 'application/json',
-                                        'Authorization': 'Bearer df9c131018dc46d7bd27841a914d5756'}})
+                                        'Authorization': 'Bearer fb92f938a80a4413a54f8281c1a14cfd'}})
             .then(response => {
                 return response.json()
             })

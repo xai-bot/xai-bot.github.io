@@ -10,7 +10,7 @@
 
         <!-- Agent Description -->
         <p class="app-description">{{app.description}} </p>
-		<p> Welcome to DrAnt - explainable AI chatbot. </p>
+		<p> Welcome to CoronaBot - explainable AI chatbot for COVID19 death risk. </p>
 		<p> You can talk with the Machine Learning model and ask for predictions and their explanations. </p>
 		<p> Do not limit yourself - the bot will learn from mistakes! </p>
 

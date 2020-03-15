@@ -13,27 +13,6 @@ export default {
             inputTitle: "Type your message",
             sendTitle: "Send",
             microphoneTitle: "Voice Input"
-        },
-        ru: {
-            welcomeTitle: "Добро пожаловать в",
-            muteTitle: "Режим звука",
-            inputTitle: "Введите ваше сообщение",
-            sendTitle: "Отправить",
-            microphoneTitle: "Голосовой ввод"
-        },
-        de: {
-            welcomeTitle: "Wilkommen bei",
-            muteTitle: "Stumm Modus",
-            inputTitle: "Schreiben Sie ihre Nachricht",
-            sendTitle: "Senden",
-            microphoneTitle: "Spracheingabe"
-        },
-        fr: {
-            welcomeTitle: "Bienvenue à",
-            muteTitle: "Sound Mode",
-            inputTitle: "Entrez votre message",
-            sendTitle: "Envoyer",
-            microphoneTitle: "Entrée vocale"
         }
     }
 }
