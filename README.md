@@ -7,3 +7,11 @@ You can talk with the Machine Learning model and ask for predictions and their e
 
 Do not limit yourself - the bot will learn from mistakes!
 
+Link to REST API with the model:
+http://54.154.190.83:8787/__swagger__/
+
+Chatbot repository:
+https://github.com/xai-bot/corona-xaibot
+
+Original WWW integration:
+https://github.com/mishushakov/dialogflow-web-v2
