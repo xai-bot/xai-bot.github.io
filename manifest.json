@@ -1,6 +1,6 @@
 {
-  "short_name": "Titanic chatbot",
-  "name": "DrAnt - chatbot explaining Machine Learning model for Titanic survival",
+  "short_name": "Covid19 - xaibot",
+  "name": "coronaBot - chatbot explaining Machine Learning model for COVID19 death risk",
   "icons": [
     {
       "src": "assets/manifest_icons/res/mipmap-mdpi/ic_launcher.png",
