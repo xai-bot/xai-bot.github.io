@@ -8,6 +8,9 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
+  "engines": {
+    "node": "10.19.x"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "langs": "^2.0.0",
