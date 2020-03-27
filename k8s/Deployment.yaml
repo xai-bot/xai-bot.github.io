@@ -1,25 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dialogflow-ui-deployment
+  name: ushaflow-web
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: dialogflow-ui
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5
+      app: ushaflow-web
   template:
     metadata:
       labels:
-        app: dialogflow-ui
+        app: ushaflow-web
     spec:
       containers:
-      - name: dialogflow-ui
-        imagePullPolicy: Always
-      imagePullSecrets:
-        - name: regcred
+      - name: ushaflow-web
+        image: docker.pkg.github.com/mishushakov/dialogflow-web-v2/dialogflow-web-v2
