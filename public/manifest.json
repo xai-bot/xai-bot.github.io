@@ -1,6 +1,6 @@
 {
-    "name": "appname",
-    "short_name": "appname",
+    "name": "CoronaBot",
+    "short_name": "CoronaBot",
     "icons": [{
         "src": "./img/icons/android-chrome-192x192.png",
         "sizes": "192x192",
