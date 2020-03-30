@@ -4,10 +4,9 @@
         <img :alt="app.displayName" class="app-icon" src="https://images.newscientist.com/wp-content/uploads/2020/01/27123401/f0070229-coronavirus_artwork-spl.jpg" />
 
         <!-- Agent Title -->
-        <h1 class="app-title">{{app.displayName}}</h1>
+        <h1 class="app-title">CoronaBot</h1>
 
         <!-- Agent Description -->
-        <p class="app-description">{{app.description}} </p>
         <p> Welcome to CoronaBot - explainable AI chatbot for COVID19 death risk. </p>
         <p> You can talk with the Machine Learning model and ask for predictions and their explanations. </p>
         <p> Do not limit yourself - the bot will learn from mistakes! </p>
