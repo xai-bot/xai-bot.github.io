@@ -11,6 +11,13 @@
         <p> You can talk with the Machine Learning model and ask for predictions and their explanations. </p>
         <p> Do not limit yourself - the bot will learn from mistakes! </p>
 
+        <h1> Disclaimer </h1>
+        <p> Please, be critical about the results you see. Don't trust the model and the data blindly.
+            This bot is primarily an experiment for human interaction with a predictive model. </p>
+        <p> This bot doesn't answer diagnostic questions. </p>
+        <p> For trusted guidelines and information visit a government or WHO pages. </p>
+
+
     </div>
 </template>
 
